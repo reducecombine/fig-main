@@ -8,7 +8,7 @@
 
   :dependencies [[org.clojure/clojure "1.10.0"]
                  [org.clojure/clojurescript "1.11.4"]
-                 
+
                  [reagent "1.1.1"  :exclusions [cljsjs/react cljsjs/react-dom cljsjs/react-dom-server]]]
 
   :source-paths ["src"]
@@ -17,11 +17,10 @@
             "fig:min"   ["run" "-m" "figwheel.main" "-O" "advanced" "-bo" "dev"]
             "fig:test"  ["run" "-m" "figwheel.main" "-co" "test.cljs.edn" "-m" "vemv.test-runner"]}
 
-  :profiles {:dev {:dependencies [[com.bhauman/figwheel-main "0.2.17"]
+  :profiles {:dev {:dependencies [[com.bhauman/figwheel-main "0.2.18"]
                                   [org.slf4j/slf4j-nop "1.7.30"]
                                   [com.bhauman/rebel-readline-cljs "0.1.4"]]
-                   
+
                    :resource-paths ["target"]
                    ;; need to add the compiled assets to the :clean-targets
                    :clean-targets ^{:protect false} ["target"]}})
-
