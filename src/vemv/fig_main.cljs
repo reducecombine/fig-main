@@ -1,6 +1,7 @@
 (ns ^:figwheel-hooks vemv.fig-main
   (:require
    [goog.dom :as gdom]
+   [vemv.foo]
    [reagent.core :as reagent :refer [atom]]
    [reagent.dom :as rdom]))
 
